@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КиноПодбор — диалог с ИИ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Шапка -->
+        <div class="chat-header">
+            <div class="avatar">🎬</div>
+            <div class="header-info">
+                <h1>КиноПодбор</h1>
+                <p><span class="status-dot"></span> ИИ-помощник онлайн</p>
+            </div>
+        </div>
+
+        <!-- Сообщения -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai">
+                <div class="bubble">
+                    Привет! 👋 Я помогу подобрать фильм или сериал под твоё настроение.<br><br>
+                    Расскажи, что хочется посмотреть: жанр, атмосферу, примерное время или любимые картины. 
+                </div>
+            </div>
+        </div>
+
+        <!-- Поле ввода -->
+        <form class="chat-input-area" id="input-form">
+            <div class="input-wrapper">
+                <textarea 
+                    class="chat-input" 
+                    id="chatInput" 
+                    placeholder="Напиши, что хочешь посмотреть..." 
+                    rows="1"
+                ></textarea>
+            </div>
+            <button class="send-btn" id="sendBtn" aria-label="Отправить" type="submit">
+                <svg viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
